@@ -1,12 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import Card from "./Card";
 
-class Cardlist extends Component {
-  render() {
-    return this.props.robots.map((user, i) => {
-      return <Card key={i} user={user} />;
-    });
-  }
-}
+const Cardlist = props => {
+  return props.robots.map((user, i) => <Card key={i} user={user} />);
+};
 
 export default Cardlist;
